@@ -1,0 +1,2 @@
+Hey! This is a project that we worked on for computer science class. We both came up with this idea. We first used Claude AI to generate the basic UI, and then we added on. We ran this in our own workspaces on VS Code. We were able to get this working, and we're trying to use this as a learning opportunity to understand repository structure. I hope that you can use this to find dairy-free ice cream. Hope I see you around. 
+
