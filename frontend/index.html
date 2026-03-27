@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Cream Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!--
+    This is the browser-facing part of the app.
+
+    Important idea:
+    - HTML runs in the user's browser.
+    - Browser code can access browser-only features like geolocation.
+    - Browser code should NOT contain private API keys.
+
+    The server will do the API calls.
+    The browser will only collect input, ask for location, call our backend,
+    and render the JSON response on the page.
+  -->
+
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">Full-Stack Demo</p>
+      <h1>Ice Cream Finder</h1>
+      <p class="intro">
+        Find nearby ice cream shops with a browser frontend and a small Express backend.
+      </p>
+    </header>
+
+    <main class="panel">
+      <section class="search-section" aria-label="Search controls">
+        <label class="field-label" for="query-input">What are you looking for?</label>
+        <input
+          id="query-input"
+          class="text-input"
+          type="text"
+          value="ice cream"
+          placeholder="Try: ice cream"
+        >
+
+        <label class="field-label" for="location-input">Location label</label>
+        <input
+          id="location-input"
+          class="text-input"
+          type="text"
+          placeholder="City, ZIP code, or leave this alone if using geolocation"
+        >
+
+        <div class="button-row">
+          <button id="use-location-btn" class="action-btn secondary" type="button">
+            Use My Location
+          </button>
+          <button id="search-btn" class="action-btn" type="button">
+            Search
+          </button>
+        </div>
+
+        <p class="help-text">
+          Geolocation only works in the browser. That is why we ask for it here and send the coordinates to the server.
+        </p>
+      </section>
+
+      <section id="status-area" class="status-area" aria-live="polite"></section>
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
